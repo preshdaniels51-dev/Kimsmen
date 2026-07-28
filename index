@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Venture | Business Solutions</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI', Arial, sans-serif}
+  body{background:#ffffff;color:#222}
+  header{background:#0a1931;color:white;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
+  header h1{letter-spacing:1px} header h1 span{color:#ffb703}
+  header nav a{color:white;text-decoration:none;margin-left:20px;font-weight:600}
+  .hero{background:linear-gradient(135deg,#0a1931,#185adb);color:white;padding:90px 8%;text-align:center}
+  .hero h2{font-size:42px;margin-bottom:15px;line-height:1.2}
+  .hero p{font-size:18px;opacity:0.9;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
+  .btn{padding:14px 32px;background:#ffb703;color:#0a1931;border:none;border-radius:30px;font-weight:bold;font-size:16px;cursor:pointer}
+  .section-title{text-align:center;padding:60px 8% 20px;font-size:28px;color:#0a1931}
+  .services{padding:20px 8% 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+  .card{border:1px solid #eee;padding:30px;border-radius:15px;text-align:center;transition:0.3s}
+  .card:hover{box-shadow:0 10px 30px rgba(0,0,0,0.1);transform:translateY(-5px)}
+  .card h3{margin:15px 0 10px;color:#0a1931}
+  .about{padding:50px 8%;background:#f5f7fb;display:flex;flex-wrap:wrap;gap:30px;align-items:center}
+  .about div{flex:1;min-width:280px}
+  .contact{background:#0a1931;color:white;padding:60px 8%;text-align:center}
+  .contact input{padding:14px;width:90%;max-width:400px;margin:8px 0;border-radius:8px;border:none}
+  footer{text-align:center;padding:20px;background:#000;color:#aaa;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>DANIEL<span>VENTURE</span></h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Building Brands That Stand Out</h2>
+  <p>Daniel Venture is your trusted partner for business growth, branding, and digital solutions in Port Harcourt and beyond.</p>
+  <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Work With Us</button>
+</section>
+
+<h2 class="section-title">What We Do</h2>
+<section id="services" class="services">
+  <div class="card">
+    <h2>💼</h2>
+    <h3>Business Consulting</h3>
+    <p>We help you start, structure and scale your business the right way.</p>
+  </div>
+  <div class="card">
+    <h2>🎨</h2>
+    <h3>Branding & Design</h3>
+    <p>Professional logos, flyers, and brand identity for Daniel Venture clients.</p>
+  </div>
+  <div class="card">
+    <h2>🌐</h2>
+    <h3>Web Development</h3>
+    <p>Modern, fast, and mobile-ready websites that bring you customers.</p>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div>
+    <h2 style="color:#0a1931;margin-bottom:15px">About Daniel Venture</h2>
+    <p>We are a Port Harcourt-based business committed to excellence, creativity, and results. At Daniel Venture, we don't just offer services — we offer growth. Whether you are a startup or an established brand, we provide solutions that work.</p>
+    <br>
+    <p><b>Location:</b> Port Harcourt, Rivers State<br><b>Core Values:</b> Integrity, Innovation, Impact</p>
+  </div>
+  <div style="background:#0a1931;color:white;padding:30px;border-radius:15px;text-align:center">
+    <h3 style="color:#ffb703">Why Choose Us?</h3>
+    <p style="margin-top:10px">✓ Trusted by local businesses<br>✓ Affordable & Professional<br>✓ Fast Delivery & Support</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's Talk Business</h2>
+  <p style="margin:15px 0;opacity:0.8">Fill the form and we will reach out today.</p>
+  <input type="text" id="name" placeholder="Your Full Name"><br>
+  <input type="text" id="phone" placeholder="WhatsApp Number"><br>
+  <button class="btn" onclick="send()">Send Message</button>
+</section>
+
+<footer>© 2026 Daniel Venture. All Rights Reserved.</footer>
+
+<script>
+function send(){
+  let name = document.getElementById("name").value;
+  if(name==""){alert("Please enter your name, boss");return;}
+  alert("Thank you " + name + "! Daniel Venture will contact you shortly. Welcome aboard!");
+}
+</script>
+</body>
+</html>
